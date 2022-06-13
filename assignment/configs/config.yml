@@ -1,7 +1,7 @@
 # input data
-base_dir: /home/odie/3DV-2022
-data_dir: ${base_dir}/data/chair_img_pc_voxel_mesh
-dtype: "point" # "point" "voxel"
+base_dir: /home/bsplab/Documents/3dv/3DV-2022/assignment
+data_dir: ${base_dir}/data/chair
+dtype: "mesh" # "point" "voxel"
 n_points: 2048
 
 # vision model
@@ -23,6 +23,10 @@ save_freq: 100
 load_checkpoint: False
 
 # eval
-vis_freq: 1000
+vis_freq: 100
 load_eval_checkpoint: True
 
+w_chamfer: 1.0
+w_smooth: 0.1
+w_edge: 1.0
+w_normal: 0.01
